@@ -28,27 +28,27 @@ urlpatterns = [
 
     #######################################################
 
-    path('catg/', category_views.CategoryGetView.as_view()),
+    path('cat/', category_views.CategoryGetView.as_view()),
     path('catp/', category_views.CategoryPostView.as_view()),
-    path('catd/<int:pk>/', category_views.CategoryDeleteView.as_view()),
-    path('catpa/<int:pk>/', category_views.CategoryUpdateView.as_view()),
+    path('cat/<int:pk>/update/', category_views.CategoryDeleteView.as_view()),
+    path('cat/<int:pk>/delete/', category_views.CategoryUpdateView.as_view()),
 
     #######################################################
 
-    path('adg/', ad_views.AdGetView.as_view()),
-    path('adgd/<int:pk>/', ad_views.AdDetailView.as_view()),
+    path('ad/', ad_views.AdGetView.as_view()),
+    path('ad/<int:pk>/', ad_views.AdDetailView.as_view()),
     path('adp/', ad_views.AdPostView.as_view()),
-    path('add/<int:pk>/', ad_views.AdDeleteView.as_view()),
-    path('adpa/<int:pk>/', ad_views.AdUpdateView.as_view()),
+    path('ad/<int:pk>/delete/', ad_views.AdDeleteView.as_view()),
+    path('ad/<int:pk>/update/', ad_views.AdUpdateView.as_view()),
     path('ad/<int:pk>/upload_imag/', ad_views.UploadImagesView.as_view()),
 
     #######################################################
 
-    path('usg/', user_views.UserGetView.as_view()),
-    path('usgd/<int:pk>/', user_views.UserDetailView.as_view()),
-    path('usd/<int:pk>/', user_views.UserDeleteView.as_view()),
-    path('usp/', user_views.UserPostView.as_view()),
-    path('uspa/<int:pk>/', user_views.UserUpdateView.as_view()),
+    path('user/', user_views.UserGetView.as_view()),
+    path('user/<int:pk>/', user_views.UserDetailView.as_view()),
+    path('user/<int:pk>/delete/', user_views.UserDeleteView.as_view()),
+    path('user/create/', user_views.UserPostView.as_view()),
+    path('user/<int:pk>/update/', user_views.UserUpdateView.as_view()),
 ]
 
 if settings.DEBUG:
