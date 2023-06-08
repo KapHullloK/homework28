@@ -29,7 +29,7 @@ urlpatterns = [
     #######################################################
 
     path('cat/', category_views.CategoryGetView.as_view()),
-    path('catp/', category_views.CategoryPostView.as_view()),
+    path('cat/create/', category_views.CategoryPostView.as_view()),
     path('cat/<int:pk>/update/', category_views.CategoryDeleteView.as_view()),
     path('cat/<int:pk>/delete/', category_views.CategoryUpdateView.as_view()),
 
@@ -37,7 +37,7 @@ urlpatterns = [
 
     path('ad/', ad_views.AdGetView.as_view()),
     path('ad/<int:pk>/', ad_views.AdDetailView.as_view()),
-    path('adp/', ad_views.AdPostView.as_view()),
+    path('ad/create/', ad_views.AdPostView.as_view()),
     path('ad/<int:pk>/delete/', ad_views.AdDeleteView.as_view()),
     path('ad/<int:pk>/update/', ad_views.AdUpdateView.as_view()),
     path('ad/<int:pk>/upload_imag/', ad_views.UploadImagesView.as_view()),
